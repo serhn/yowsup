@@ -1,10 +1,14 @@
 FROM ubuntu:18.04
-
-RUN apt-get update -y && apt-get install -y curl unzip python python-pip \
-python-setuptools python-dateutil
+RUN apt-get update -y && apt-get install -y python python-pip git
+#RUN apt-get update -y && apt-get install -y curl unzip python python-pip 
+RUN pip install python-dateutil protobuf pycrypto python-axolotl-curve25519
+RUN git clone https://github.com/tgalal/yowsup.git
+RUN cd yowsup
+RUN python setup.py install
+#python-setuptools python-dateutil
 #python-pip gcc
 #RUN pip install yowsup2
-
+#RUN ln -fs /usr/share/zoneinfo/US/Pacific-New /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 #/usr/local/lib/python2.7/dist-packages/yowsup2-2.5.7-py2.7.egg/yowsup/env/env.py
 #
 
