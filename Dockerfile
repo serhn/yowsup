@@ -4,6 +4,9 @@ RUN apt-get update -y && apt-get install -y python python-pip git
 RUN pip install python-dateutil protobuf pycrypto python-axolotl-curve25519
 RUN git clone https://github.com/tgalal/yowsup.git
 RUN cd yowsup
+#env_android.py
+#_MD5_CLASSES = "YlajJPPGUUP1Ptcic2XKNA=="
+#_VERSION = "2.18.105"
 RUN python setup.py install
 #python-setuptools python-dateutil
 #python-pip gcc
