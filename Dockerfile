@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update -y && apt-get install -y curl unzip python python-pip \
-python-setuptools python-dateutil protobuf pycrypto python-axolotl-curve25519
+python-setuptools python-dateutil
 #python-pip gcc
 RUN pip install yowsup2
 
